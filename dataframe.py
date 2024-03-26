@@ -10,7 +10,7 @@ def load_data():
     return df
 
 def plot_matplotlib():
-    st.title("Categorical Bar Plot with Seaborn")
+    st.title("**Bar Plot** with Seaborn")
     df = load_data()
     fig, ax = plt.subplots()
     
@@ -20,8 +20,7 @@ def plot_matplotlib():
     # Labeling axes and title
     ax.set_xlabel("year")
     ax.set_ylabel("lifeExp")
-    ax.set_title("Bar Plot : Year vs. lifeExp")
-    
+        
     st.pyplot(fig)
 
 def main():
@@ -32,7 +31,6 @@ def main():
     st.dataframe(df, use_container_width=True)
 
     #pandas style
-    st.title("Maximum value per column")
     st.dataframe(df.iloc[:5,2:].style.highlight_max(axis=0))
 
     plot_matplotlib()
